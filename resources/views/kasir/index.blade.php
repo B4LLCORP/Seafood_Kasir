@@ -99,7 +99,7 @@
                     <div class="card-footer">
                         <button type="button" id="bayar-modal" class="btn m-1 btn-outline-primary float-right"
                             data-toggle="modal" data-target="#form-bayar">Bayar</button>
-                        <a href="/{{auth()->user()->level}}/penjualan/hapus/semua"
+                        {{-- <a href="/{{auth()->user()->level}}/penjualan/hapus/semua" --}}
                             class="btn m-1 btn-outline-danger float-right">Batal</a>
                     </div>
                 </div>
@@ -109,8 +109,8 @@
     </div>
     </div>
 </section>
-@include('penjualan.dataBarang')
-@include('penjualan.formBayar')
+{{-- @include('penjualan.dataBarang')
+@include('penjualan.formBayar') --}}
 @endsection
 
 @push('script')

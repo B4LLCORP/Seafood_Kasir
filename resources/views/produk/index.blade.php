@@ -38,7 +38,7 @@
                                     <td>{{$item->Harga}}</td>
                                     <td>{{$item->stok}}</td>
                                     <td>
-                                        <a href="" class="btn btn-success btn-sm">
+                                        <a href="{{url('editproduk/'.$item->ProdukID)}}" class="btn btn-success btn-sm">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
                                         <a href="{{url('hapusadmin/'.$item->ProdukID)}}" class="btn btn-danger btn-sm">

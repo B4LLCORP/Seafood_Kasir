@@ -35,7 +35,7 @@
                             <tbody>
                                 @foreach ($data as $item)
                                     <tr>
-                                        <td>{{$item->id_kasir}}</td>
+                                        <td>{{$item->IdAdmin}}</td>
                                         <td>{{$item->nama}}</td>
                                         <td>{{$item->alamat}}</td>
                                         <td>{{$item->telepon}}</td>
@@ -43,7 +43,7 @@
                                         <td>{{$item->password}}</td>
                                         <td>{{$item->akses}}</td>
                                         <td>
-                                            <a href="" class="btn btn-success btn-sm">
+                                            <a href="{{url('editregis/'.$item->IdAdmin)}}" class="btn btn-success btn-sm">
                                                 <i class="bi bi-pencil-square"></i>
                                             </a>
                                             <a href="{{url('hapusadmin/'.$item->IdAdmin)}}" class="btn btn-danger btn-sm">
@@ -60,5 +60,7 @@
         </div>
     </div>
 </section>
-@include('regisadmin.modal');
+@include('registrasi.modal');
 @endsection
+{{--fungsi commit and roll back--}}
+{{--untuk melakukan restore data ke kondisi awal sebelum dilakukan perubahan data.-}}

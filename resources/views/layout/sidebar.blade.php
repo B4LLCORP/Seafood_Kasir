@@ -19,7 +19,7 @@
                 <a href="{{url('admin/pelanggan')}}" class="nav-link"><i class="fas fa-box"></i><span>Data pelanggan</span></a>
             </li>
             <li class="dropdown">
-                <a href="{{url('')}}" class="nav-link"><i class="fas fa-file"></i><span>Data Admin</span></a>
+                <a href="{{url('admin/registrasi')}}" class="nav-link"><i class="fas fa-file"></i><span>Data Admin</span></a>
             </li>
         </ul>
     </aside>

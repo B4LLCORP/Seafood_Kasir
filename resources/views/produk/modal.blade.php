@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{url('cekdata')}}" method="POST">
+                <form action="{{url('cekproduk')}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="NamaProduk">Nama Produk</label>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group">
                         <label for="stok">Stok</label>
-                        <input type="number" class="form-control" name="stok" id="stok" placeholder="Masukan stok dengan teliti">
+                        <input type="text" class="form-control" name="stok" id="stok" placeholder="Masukan stok dengan teliti">
                     </div>
                     <button type="submit" class="btn btn-outline-primary float-right">Tambah</button>
                 </form>

@@ -9,33 +9,36 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{url('cekadmin')}}" method="POST">
+                <form action ="" method="POST">
+                    @foreach ($data as $item)
+                        
+                    @endforeach
                     @csrf
                     <div class="form-group">
                         <label for="nama">Nama Lengkap</label>
-                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama lengkap ">
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama lengkap anda" value="{{$item->nama}}">
                     </div>
                     <div class="form-group">
                         <label for="alamat">Alamat</label>
-                        <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Masukan alamat dengan benar">
+                        <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Masukan alamat dengan benar" value="{{$item->alamat}}">
                     </div>
                     <div class="form-group">
                         <label for="telepon">Telepon</label>
-                        <input type="text" class="form-control" name="telepon" id="telepon" placeholder="Masukan telepon dengan teliti">
+                        <input type="text" class="form-control" name="telepon" id="telepon" placeholder="Masukan nomer yang masih aktif" value="{{$item->telepon}}">
                     </div>
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="Masukan username dengan benar">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Masukan nomer yang masih aktif" value="{{$item->username}}">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukan password dengan benar">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukan nomer yang masih aktif" value="{{$item->password}}">
                     </div>
                     <div class="form-group">
                         <label for="">Akses</label>
-                        <select class="form-select" aria-label="Default select example" id="akses" name="akses">
-                            <option value="admin">admin</option>
-                            <option value="kasir">petugas</option>
+                        <select class="form-select" aria-label="Default select example" id="akses" name="akses" value="{{$item->akses}}">
+                            <option {{$item->akses=="admin"?"selected":""}}>admin</option>
+                            <option {{$item->akses=="petugas"?"selected":""}}>Petugas</option>
                           </select>
                     </div>
                     <button type="submit" class="btn btn-outline-primary float-right">Tambah</button>
